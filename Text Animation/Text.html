@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        body {
+            background-image: url(text-backgroud.webp);
+            -webkit-background-size:cover ;
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+        }
+       
+        .wrapper p{
+            color: rgb(255, 0, 166);
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 2px;
+            margin: 15px 0;
+        }
+        .wrapper{
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%,-50%);
+
+        }
+        .text-area{
+            font-size: 45px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+        }
+        .text-area span{
+            color: aqua;
+            /* opacity: 0; */
+            transform: rotate(-180deg) translate(150px ,0);
+            animation: animate 3s forwards;
+            display: inline-block;
+        }
+        text-area :nth-last-of-type(2){
+            animation-delay: 1s;
+        }
+        text-area :nth-last-of-type(3){
+            animation-delay: 3s;
+        }
+        text-area :nth-last-of-type(4){
+            animation-delay: 4s;
+        }
+        text-area :nth-last-of-type(5){
+            animation-delay: 5s;
+        }
+        text-area :nth-last-of-type(6){
+            animation-delay: 6s;
+        }
+        text-area :nth-last-of-type(7){
+            animation-delay: 7s;
+        }
+        text-area :nth-last-of-type(8){
+            animation-delay: 8s;
+        }
+        text-area :nth-last-of-type(9){
+            animation-delay: 9s;
+        }
+        text-area :nth-last-of-type(10){
+            animation-delay: 10s;
+        }
+        text-area :nth-last-of-type(11){
+            animation-delay: 11s;
+        }
+        @keyframes animate{
+            30%{
+                transform: translate(0,-150deg) rotate(180deg) scale(1);
+
+            }
+            50%{
+                transform: translate(0,-20deg) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            80%{
+                transform: translate(-100px,-150deg) rotate(180deg) scale(1.5);
+                opacity: 0;
+            }
+            100%{
+                transform: translate(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="text-area">
+            <span>A</span>
+            <span>M</span>
+            <span>I</span>
+            <span>T</span>
+            <span>R</span>
+            <span>I</span>
+            <span>F</span>
+            <span>R</span>
+            <span>E</span>
+            <span>S</span>
+            <span>H</span>
+        </div>
+        <p>Text animation is above...</p>
+    </div>
+</body>
+
+</html>
